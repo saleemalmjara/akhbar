@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أخبار الظليل - الصفحة الرئيسية</title>
     <style>
         :root {
@@ -12,70 +12,70 @@
             --dark-color: #2c3e50;
             --text-color: #333;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Tajawal', Arial, sans-serif;
         }
-        
+
         body {
             background-color: #f5f5f5;
             color: var(--text-color);
             line-height: 1.6;
         }
-        
+
         header {
             background-color: var(--primary-color);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
             color: white;
             text-decoration: none;
         }
-        
+
         .logo span {
             color: var(--secondary-color);
         }
-        
+
         nav ul {
             display: flex;
             list-style: none;
         }
-        
+
         nav ul li {
             margin-right: 1.5rem;
         }
-        
+
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
-        
+
         nav ul li a:hover {
             color: var(--secondary-color);
         }
-        
+
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1200x400') center/cover;
             height: 400px;
@@ -85,22 +85,22 @@
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .hero-content {
             width: 100%;
         }
-        
+
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
         }
-        
+
         .btn {
             display: inline-block;
             background-color: var(--secondary-color);
@@ -110,15 +110,15 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
-        
+
         .btn:hover {
             background-color: #c0392b;
         }
-        
+
         .news-section {
             padding: 2rem 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 2rem;
@@ -126,7 +126,7 @@
             position: relative;
             padding-bottom: 0.5rem;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -137,13 +137,13 @@
             height: 3px;
             background-color: var(--secondary-color);
         }
-        
+
         .news-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .news-card {
             background-color: white;
             border-radius: 8px;
@@ -151,31 +151,31 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
-        
+
         .news-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .news-img {
             height: 200px;
             overflow: hidden;
         }
-        
+
         .news-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-        
+
         .news-card:hover .news-img img {
             transform: scale(1.05);
         }
-        
+
         .news-content {
             padding: 1.5rem;
         }
-        
+
         .news-category {
             display: inline-block;
             background-color: var(--secondary-color);
@@ -185,25 +185,25 @@
             font-size: 0.8rem;
             margin-bottom: 0.8rem;
         }
-        
+
         .news-title {
             font-size: 1.2rem;
             margin-bottom: 0.8rem;
             color: var(--dark-color);
         }
-        
+
         .news-excerpt {
             color: #666;
             margin-bottom: 1rem;
         }
-        
+
         .news-meta {
             display: flex;
             justify-content: space-between;
             color: #888;
             font-size: 0.9rem;
         }
-        
+
         footer {
             background-color: var(--dark-color);
             color: white;
@@ -211,57 +211,60 @@
             text-align: center;
             margin-top: 2rem;
         }
-        
+
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+
         .social-links {
             margin: 1rem 0;
         }
-        
+
         .social-links a {
             color: white;
             margin: 0 0.5rem;
             font-size: 1.2rem;
             transition: color 0.3s;
         }
-        
+
         .social-links a:hover {
             color: var(--secondary-color);
         }
-        
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
             }
-            
+
             .logo {
                 margin-bottom: 1rem;
             }
-            
+
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             nav ul li {
                 margin: 0.5rem;
             }
-            
+
             .hero {
                 height: 300px;
             }
-            
+
             .hero h1 {
                 font-size: 2rem;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 </head>
 <body>
     <header>
@@ -274,117 +277,138 @@
                         <li><a href="#">أخبار محلية</a></li>
                         <li><a href="#">أخبار رياضية</a></li>
                         <li><a href="#">مقالات</a></li>
-                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    
+
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1>أحدث الأخبار المحلية في الظليل</h1>
-                <p>نقدم لكم آخر التطورات والأخبار العاجلة من مدينة الظليل ومنطقة الأغوار الجنوبية</p>
+                <p>نقدم لكم آخر التطورات والأخبار العاجلة من مدينة الظليل والمناطق المحيطة بها</p>
                 <a href="#" class="btn">اشترك الآن</a>
             </div>
         </div>
     </section>
-    
+
     <section class="news-section">
         <div class="container">
             <h2 class="section-title">أهم الأخبار</h2>
-            
+
             <div class="news-grid">
                 <!-- خبر 1 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="images/abc.jfif" alt="">
+                        <img src="https://imgy.pro/alwakeel/605x392/11202415143410427262674.jpg" alt="بلدية الظليل تواصل مشروع تأهيل البنية التحتية" />
                     </div>
                     <div class="news-content">
                         <span class="news-category">محليات</span>
                         <h3 class="news-title">افتتاح مشروع مائي جديد في الظليل</h3>
-                        <p class="news-excerpt">تم اليوم افتتاح مشروع مائي جديد في لواء الظليل يهدف إلى تحسين خدمات المياه لسكان المنطقة.</p>
+                        <p class="news-excerpt">
+                            تم اليوم افتتاح مشروع مائي جديد في لواء الظليل يهدف إلى تحسين خدمات المياه لسكان المنطقة.
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-clock"></i> منذ ساعتين</span>
                             <span><i class="far fa-eye"></i> 245</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- خبر 2 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="https://via.placeholder.com/600x400?text=صورة+خبر+2" alt="خبر رياضي">
+                        <img src="https://okathjordan.com/wp-content/uploads/2023/06/%D8%A4%D8%A4%D8%A4%D8%A1%D8%A6.jpg?a69f72&a69f72" alt="فريق شباب الظليل" />
                     </div>
                     <div class="news-content">
                         <span class="news-category">رياضة</span>
                         <h3 class="news-title">فريق شباب الظليل يتأهل إلى دوري المحترفين</h3>
-                        <p class="news-excerpt">حقق فريق شباب الظليل فوزًا تاريخيًا يؤهله للمشاركة في دوري المحترفين للمرة الأولى في تاريخه.</p>
+                        <p class="news-excerpt">
+                            حقق فريق شباب الظليل فوزًا تاريخيًا يؤهله للمشاركة في دوري المحترفين للمرة الأولى في تاريخه.
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-clock"></i> منذ 5 ساعات</span>
                             <span><i class="far fa-eye"></i> 378</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- خبر 3 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="https://via.placeholder.com/600x400?text=صورة+خبر+3" alt="خبر تعليمي">
+                        <img
+                            src="https://www.addustour.com/file.php?fileid=436089&width=800&height=450"
+                            alt="مدرسة الظليل الثانوية"
+                        />
                     </div>
                     <div class="news-content">
                         <span class="news-category">تعليم</span>
                         <h3 class="news-title">مدرسة الظليل الثانوية تحصد جائزة التميز على مستوى المملكة</h3>
-                        <p class="news-excerpt">فازت مدرسة الظليل الثانوية للبنات بجائزة التميز التعليمي للعام الحالي.</p>
+                        <p class="news-excerpt">
+                            فازت مدرسة الظليل الثانوية للبنات بجائزة التميز التعليمي للعام الحالي.
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-clock"></i> منذ يوم</span>
                             <span><i class="far fa-eye"></i> 512</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- خبر 4 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="https://via.placeholder.com/600x400?text=صورة+خبر+4" alt="خبر صحي">
+                        <img src="https://imgy.pro/alghad/907x511/u/2019/12/0tqszo7c.jpg" alt="افتتاح مركز صحي" />
                     </div>
                     <div class="news-content">
                         <span class="news-category">صحة</span>
                         <h3 class="news-title">افتتاح مركز صحي متطور في الظليل</h3>
-                        <p class="news-excerpt">برعاية وزير الصحة، تم افتتاح مركز صحي جديد في الظليل مجهز بأحدث التقنيات الطبية.</p>
+                        <p class="news-excerpt">
+                            برعاية وزير الصحة، تم افتتاح مركز صحي جديد في الظليل مجهز بأحدث التقنيات الطبية.
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-clock"></i> منذ يومين</span>
                             <span><i class="far fa-eye"></i> 421</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- خبر 5 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="https://via.placeholder.com/600x400?text=صورة+خبر+5" alt="خبر اقتصادي">
+                        <img
+                            src="https://tse4.mm.bing.net/th/id/OIP.oLGQpb-MZKwT6JhS2lr5bQHaFj?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="مشروع استثماري"
+                        />
                     </div>
                     <div class="news-content">
                         <span class="news-category">اقتصاد</span>
                         <h3 class="news-title">إطلاق مشروع استثماري كبير في منطقة الظليل الصناعية</h3>
-                        <p class="news-excerpt">أعلن عن مشروع استثماري جديد في المنطقة الصناعية بالظليل بقيمة 20 مليون دينار.</p>
+                        <p class="news-excerpt">
+                            أعلن عن مشروع استثماري جديد في المنطقة الصناعية بالظليل بقيمة 20 مليون دينار.
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-clock"></i> منذ 3 أيام</span>
                             <span><i class="far fa-eye"></i> 689</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- خبر 6 -->
                 <div class="news-card">
                     <div class="news-img">
-                        <img src="https://via.placeholder.com/600x400?text=صورة+خبر+6" alt="خبر ثقافي">
+                        <img
+                            src="https://via.placeholder.com/600x400?text=خبر+ثقافي"
+                            alt="مهرجان الظليل الثقافي"
+                        />
                     </div>
                     <div class="news-content">
                         <span class="news-category">ثقافة</span>
                         <h3 class="news-title">مهرجان الظليل الثقافي يستقطب آلاف الزوار</h3>
-                        <p class="news-excerpt">اختتمت فعاليات مهرجان الظليل الثقافي السنوي بمشاركة واسعة من الفنانين والأدباء.</p>
+                        <p class="news-excerpt">
+                            اختتمت فعاليات مهرجان الظليل الثقافي السنوي بمشاركة واسعة من الفنانين والأدباء.
+                        </p>
                         <div class="news-meta">
                             <span><i class="far fa-clock"></i> منذ 4 أيام</span>
                             <span><i class="far fa-eye"></i> 754</span>
@@ -394,19 +418,22 @@
             </div>
         </div>
     </section>
-    
-    <footer>
+
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <h3>أخبار الظليل</h3>
                 <p>نافذتك على آخر أخبار مدينة الظليل والمناطق المحيطة</p>
+                <p><strong>للتواصل معنا:</strong></p>
+                <p>📧 azazmhsaleem@gmail.com</p>
+                <p>📞 0780013815</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
-                <p>جميع الحقوق محفوظة &copy; 2023 أخبار الظليل</p>
+                <p>جميع الحقوق محفوظة &copy; 2025 أخبار الظليل</p>
             </div>
         </div>
     </footer>
